@@ -11,7 +11,7 @@ const Header = () => {
 		<header className="py-[70px]">
 			<div className="mx-container">
 				<div className="grid grid-cols-2 items-center gap-28">
-					<div className="space-y-9 max-w-md">
+					<div className="space-y-9 max-w-lg">
 						<h1 className="font-medium text-6xl">
 							Navigating the digital landscape for success
 						</h1>
