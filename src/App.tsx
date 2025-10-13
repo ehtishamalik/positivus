@@ -1,5 +1,13 @@
+import Header from "./components/Header";
+import Logos from "./components/Logos";
+
 function App() {
-	return <h1 className="text-3xl font-bold text-red-400">Hello</h1>;
+	return (
+		<main>
+			<Header />
+			<Logos />
+		</main>
+	);
 }
 
 export default App;
