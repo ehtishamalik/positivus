@@ -1,9 +1,12 @@
+import clsx from "clsx";
+
 interface HeadingProps {
 	children: React.ReactNode;
 	title: string;
+	className?: string;
 }
 
-const Heading = ({ children, title }: HeadingProps) => {
+const Heading = ({ children, title, className }: HeadingProps) => {
 	return (
 		<section className="pb-20">
 			<div className="mx-container">
@@ -11,7 +14,14 @@ const Heading = ({ children, title }: HeadingProps) => {
 					<h2 className="bg-theme-green text-black text-[40px] font-medium p-2 rounded-md">
 						{title}
 					</h2>
-					<p className="font-normal text-lg text-black max-w-xl">{children}</p>
+					<p
+						className={clsx(
+							"font-normal text-lg text-black max-w-xl",
+							className,
+						)}
+					>
+						{children}
+					</p>
 				</div>
 			</div>
 		</section>
