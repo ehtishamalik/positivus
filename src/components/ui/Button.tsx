@@ -9,7 +9,7 @@ const Button = ({ children, href }: ButtonProps) => {
 		<Slot
 			type="button"
 			href={href}
-			className="inline-flex gap-2 items-center justify-start bg-theme-black text-white text-[20px] cursor-pointer rounded-[14px] px-[35px] py-[20px]"
+			className="inline-flex gap-2 items-center justify-start bg-theme-black text-white text-[20px] leading-7 cursor-pointer rounded-[14px] px-[35px] py-[20px]"
 		>
 			{children}
 		</Slot>
