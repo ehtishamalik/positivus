@@ -1,9 +1,3 @@
-import CircleBlack from "/public/cta/circle-black.svg";
-import EllipseHolo from "/public/cta/ellipse-holo.svg";
-import Eye from "/public/cta/eye.svg";
-import StarGray from "/public/cta/star-gray.svg";
-import StarGreen from "/public/cta/star-green.svg";
-import StarHolo from "/public/cta/star-holo.svg";
 import Button from "./ui/Button";
 
 const CTA = () => {
@@ -24,46 +18,46 @@ const CTA = () => {
 							<div className="relative w-full">
 								<div className="absolute z-10 top-1/2 -translate-y-1/2 left-[90px]">
 									<div className="relative">
-										<img src={CircleBlack} alt="Circle Black" />
+										<img src="/cta/circle-black.svg" alt="Circle Black" />
 										<img
-											src={Eye}
+											src="/cta/eye.svg"
 											alt="Eye"
 											className="absolute top-6 left-8"
 										/>
 										<img
-											src={Eye}
+											src="/cta/eye.svg"
 											alt="Eye"
 											className="absolute top-6 right-8"
 										/>
 									</div>
 								</div>
 								<img
-									src={EllipseHolo}
+									src="/cta/ellipse-holo.svg"
 									alt="Ellipse Holo"
 									className="absolute top-6"
 								/>
 								<img
-									src={EllipseHolo}
+									src="/cta/ellipse-holo.svg"
 									alt="Ellipse Holo"
 									className="absolute top-0"
 								/>
 								<img
-									src={EllipseHolo}
+									src="/cta/ellipse-holo.svg"
 									alt="Ellipse Holo"
 									className="absolute -top-6"
 								/>
 								<img
-									src={StarHolo}
+									src="/cta/star-holo.svg"
 									alt="Star Holo"
 									className="absolute -bottom-5 right-20"
 								/>
 								<img
-									src={StarGray}
+									src="/cta/star-gray.svg"
 									alt="Star Gray"
 									className="absolute right-16"
 								/>
 								<img
-									src={StarGreen}
+									src="/cta/star-green.svg"
 									alt="Star Green"
 									className="absolute top-20 left-16"
 								/>
