@@ -7,6 +7,7 @@ import Logos from "./components/Logos";
 import Navbar from "./components/Navbar";
 import Services from "./components/Services";
 import Teams from "./components/Teams";
+import Testimonials from "./components/Testimonials";
 import WorkingProcess from "./components/WorkingProcess";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
 			<CaseStudies />
 			<WorkingProcess />
 			<Teams />
+			<Testimonials />
 			<Contact />
 			<Footer />
 		</main>
