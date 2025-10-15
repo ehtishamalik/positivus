@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Logos from "./components/Logos";
 import Navbar from "./components/Navbar";
 import Services from "./components/Services";
+import Teams from "./components/Teams";
 import WorkingProcess from "./components/WorkingProcess";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
 			<CTA />
 			<CaseStudies />
 			<WorkingProcess />
+			<Teams />
 			<Footer />
 		</main>
 	);
