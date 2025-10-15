@@ -1,4 +1,5 @@
 import CaseStudies from "./components/CaseStudies";
+import Contact from "./components/Contact";
 import CTA from "./components/CTA";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
@@ -19,6 +20,7 @@ function App() {
 			<CaseStudies />
 			<WorkingProcess />
 			<Teams />
+			<Contact />
 			<Footer />
 		</main>
 	);

@@ -5,6 +5,7 @@ interface ButtonProps {
 	href?: string;
 	variant?: "primary" | "secondary";
 	size?: "default" | "lg";
+	className?: string;
 }
 
 const Button = ({
@@ -12,6 +13,7 @@ const Button = ({
 	href,
 	variant = "secondary",
 	size = "default",
+	className,
 }: ButtonProps) => {
 	const Slot = href ? "a" : "button";
 	return (
@@ -19,13 +21,14 @@ const Button = ({
 			type="button"
 			href={href}
 			className={clsx(
-				"inline-flex gap-2 items-center justify-start text-[20px] leading-7 cursor-pointer rounded-[14px] py-[20px]",
+				"inline-flex gap-2 items-center justify-start text-[20px] leading-7 cursor-pointer rounded-[14px] py-[20px] transition-all hover:opacity-80 active:scale-95",
 				{
 					"bg-theme-green text-black": variant === "primary",
 					"bg-theme-black text-white": variant === "secondary",
 					"px-[35px]": size === "default",
 					"px-[76px]": size === "lg",
 				},
+				className,
 			)}
 		>
 			{children}
