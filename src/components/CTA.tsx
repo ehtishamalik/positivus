@@ -12,7 +12,9 @@ const CTA = () => {
 								Contact us today to learn more about how our digital marketing
 								services can help your business grow and succeed online.
 							</p>
-							<Button>Get your free proposal</Button>
+							<Button href="https://www.upwork.com/freelancers/~01244186faa3053ffe">
+								Get your free proposal
+							</Button>
 						</div>
 						<div className="size-full flex items-center justify-center">
 							<div className="relative w-full">

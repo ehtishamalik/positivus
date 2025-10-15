@@ -20,6 +20,8 @@ const Button = ({
 		<Slot
 			type="button"
 			href={href}
+			target="_blank"
+			rel="noreferrer noopener"
 			className={clsx(
 				"inline-flex gap-2 items-center justify-start text-[20px] leading-7 cursor-pointer rounded-[14px] py-[20px] transition-all hover:opacity-80 active:scale-95",
 				{

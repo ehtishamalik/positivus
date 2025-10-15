@@ -20,7 +20,9 @@ const Header = () => {
 							online through a range of services including SEO, PPC, social
 							media marketing, and content creation.
 						</p>
-						<Button>Book a consultation</Button>
+						<Button href="https://www.upwork.com/freelancers/~01244186faa3053ffe">
+							Book a consultation
+						</Button>
 					</div>
 					<div className="flex items-center justify-center size-full h-[515px]">
 						<div className="relative -top-14 w-full">

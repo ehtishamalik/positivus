@@ -80,7 +80,7 @@ const Card = ({ name, role, image, description }: Team) => {
 const Teams = () => {
 	return (
 		<>
-			<Heading title="Team" className="!max-w-[473px]">
+			<Heading title="Team" className="!max-w-[473px]" id="our-team">
 				Meet the skilled and experienced team behind our successful digital
 				marketing strategies
 			</Heading>
@@ -93,7 +93,11 @@ const Teams = () => {
 							))}
 						</div>
 						<div className="flex justify-end mb-[100px]">
-							<Button variant="secondary" size="lg">
+							<Button
+								variant="secondary"
+								size="lg"
+								href="https://www.upwork.com/freelancers/~01244186faa3053ffe"
+							>
 								See all team
 							</Button>
 						</div>

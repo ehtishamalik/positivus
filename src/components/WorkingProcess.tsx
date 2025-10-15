@@ -42,7 +42,11 @@ const accordionData = [
 const WorkingProcess = () => {
 	return (
 		<>
-			<Heading title="Our Working Process" className="!max-w-[292px]">
+			<Heading
+				title="Our Working Process"
+				className="!max-w-[292px]"
+				id="about-us"
+			>
 				Step-by-Step Guide to Achieving Your Business Goals
 			</Heading>
 			<section>

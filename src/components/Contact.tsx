@@ -8,7 +8,7 @@ const Contact = () => {
 	const messageId = useId();
 	return (
 		<>
-			<Heading title="Contact Us" className="!max-w-[323px]">
+			<Heading title="Contact Us" className="!max-w-[323px]" id="contact-us">
 				Connect with Us: Let's Discuss Your Digital Marketing Needs
 			</Heading>
 			<section className="mb-[140px]">
@@ -63,7 +63,10 @@ const Contact = () => {
 											className="min-h-[190px] py-[18px] px-[30px] rounded-[14px] bg-white border border-theme-black"
 										/>
 									</div>
-									<Button className="w-full !justify-center">
+									<Button
+										className="w-full !justify-center"
+										href="https://www.upwork.com/freelancers/~01244186faa3053ffe"
+									>
 										Send Message
 									</Button>
 								</form>

@@ -1,27 +1,6 @@
 import Button from "./ui/Button";
 
-const links = [
-	{
-		name: "About us",
-		href: "#about",
-	},
-	{
-		name: "Services",
-		href: "#services",
-	},
-	{
-		name: "Use Cases",
-		href: "#use-cases",
-	},
-	{
-		name: "Pricing",
-		href: "#pricing",
-	},
-	{
-		name: "Blog",
-		href: "#blog",
-	},
-];
+import { NavItems } from "../constants";
 
 const Footer = () => {
 	return (
@@ -30,9 +9,12 @@ const Footer = () => {
 				<div className="bg-theme-black text-white rounded-tl-[45px] rounded-tr-[45px] py-[55px] px-[60px]">
 					<div className="flex items-center justify-between mb-[66px]">
 						<img src="/icons/logo-white.svg" alt="Logo" height={29} />
-						<ol className="flex items-center gap-10 underline underline-offset-2">
-							{links.map((link) => (
-								<li key={link.name}>
+						<ol className="flex items-center gap-10">
+							{NavItems.map((link) => (
+								<li
+									key={link.name}
+									className="hover:underline underline-offset-4 active:scale-95"
+								>
 									<a href={link.href}>{link.name}</a>
 								</li>
 							))}
@@ -74,7 +56,12 @@ const Footer = () => {
 						<p>
 							&copy; {new Date().getFullYear()} Positivus. All Rights Reserved.
 						</p>
-						<a href="#privacy-policy">Privacy Policy</a>
+						<a
+							href="#privacy-policy"
+							className="hover:underline underline-offset-4 active:scale-95"
+						>
+							Privacy Policy
+						</a>
 					</div>
 				</div>
 			</div>

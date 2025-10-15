@@ -43,6 +43,8 @@ const Card = ({ heading, imageSrc, href, variant }: CardProps) => {
 					</h3>
 					<a
 						href={href}
+						target="_blank"
+						rel="noreferrer noopener"
 						className={clsx(
 							"flex gap-4 items-center text-xl font-normal leading-7",
 							{

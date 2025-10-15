@@ -1,12 +1,7 @@
+import clsx from "clsx";
 import Logo from "/icons/logo.svg";
 
-const links = [
-	{ name: "About Us", href: "#about" },
-	{ name: "Services", href: "#services" },
-	{ name: "Use Cases", href: "#use-cases" },
-	{ name: "Pricing", href: "#pricing" },
-	{ name: "Blog", href: "#blog" },
-];
+import { NavItems } from "../constants";
 
 const Navbar = () => {
 	return (
@@ -15,11 +10,15 @@ const Navbar = () => {
 				<div className="flex items-center justify-between">
 					<img src={Logo} alt="logo" height={56} className="h-14" />
 					<ol className="flex items-center gap-10">
-						{links.map((link) => (
+						{NavItems.map((link) => (
 							<li key={link.name}>
 								<a
 									href={link.href}
-									className="inline-block text-xl font-normal leading-7 text-black hover:underline underline-offset-4"
+									className={clsx(
+										"inline-block text-xl font-normal leading-7 text-black underline-offset-4 transition-transform",
+										"hover:underline",
+										"active:scale-95",
+									)}
 								>
 									{link.name}
 								</a>
@@ -27,8 +26,13 @@ const Navbar = () => {
 						))}
 						<li>
 							<a
-								href="#quote"
-								className="inline-block text-xl font-normal leading-7 px-[35px] py-5 rounded-[14px] border border-theme-black text-black"
+								href="https://www.upwork.com/freelancers/~01244186faa3053ffe"
+								target="_blank"
+								rel="noreferrer noopener"
+								className={clsx(
+									"inline-block text-xl font-normal leading-7 px-[35px] py-5 rounded-[14px] border border-theme-black text-black transition-transform",
+									"active:scale-95",
+								)}
 							>
 								Request a Quote
 							</a>
