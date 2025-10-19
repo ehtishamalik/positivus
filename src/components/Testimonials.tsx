@@ -1,15 +1,15 @@
 import "swiper/swiper.css";
 import Heading from "./Heading";
+import clsx from "clsx";
 
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import { useState } from "react";
-import clsx from "clsx";
 
 const Testimonial = () => {
 	return (
 		<div>
-			<div className="border-2 rounded-[45px] py-12 px-[52px] border-theme-green leading-[1.6]">
+			<div className="relative border-2 rounded-[45px] py-12 px-[52px] border-theme-green leading-[1.6]">
 				<p className="text-white text-lg">
 					"We have been working with Positivus for the past year and have seen a
 					significant increase in website traffic and leads as a result of their
@@ -17,6 +17,13 @@ const Testimonial = () => {
 					the success of our business. We highly recommend Positivus to any
 					company looking to grow their online presence."
 				</p>
+				<div className="absolute w-16 h-9 -bottom-[26px]">
+					<div className="relative size-full flex items-center justify-center">
+						<span className="inline-block bg-theme-green w-0.5 h-full absolute origin-bottom rotate-45"></span>
+						<span className="inline-block bg-theme-green w-0.5 h-full absolute origin-bottom -rotate-45"></span>
+						<span className="inline-block bg-theme-black w-0.5 h-full absolute origin-center rotate-90 -top-[7px] scale-[1.25]"></span>
+					</div>
+				</div>
 			</div>
 			<div className="ml-20 mt-12">
 				<h4 className="text-theme-green text-lg">John Smith</h4>

@@ -15,8 +15,8 @@ const Navbar = () => {
 								<a
 									href={link.href}
 									className={clsx(
-										"inline-block text-xl font-normal leading-7 text-black underline-offset-4 transition-transform",
-										"hover:underline",
+										"relative inline-block text-xl font-normal leading-7 text-black transition-transform",
+										"after:absolute after:-bottom-0.5 after:left-0 after:h-0.5 after:w-full after:origin-bottom-right after:scale-x-0 after:bg-theme-black after:transition-transform after:duration-300 hover:after:origin-bottom-left hover:after:scale-x-100",
 										"active:scale-95",
 									)}
 								>

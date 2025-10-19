@@ -1,5 +1,11 @@
 import Heading from "./Heading";
 import Card from "./ui/Card";
+import SearchEngine from "/services/search-engine.svg";
+import PayPerClick from "/services/pay-per-click.svg";
+import SocialMedia from "/services/social-media.svg";
+import EmailMarketing from "/services/email-marketing.svg";
+import ContentCreation from "/services/content-creation.svg";
+import Analytics from "/services/analytics-tracking.svg";
 
 const services: {
 	heading: string[];
@@ -9,37 +15,37 @@ const services: {
 }[] = [
 	{
 		heading: ["Search engine", "optimization"],
-		imageSrc: "/services/search-engine.svg",
+		imageSrc: SearchEngine,
 		href: "https://searchengineland.com/guide/what-is-seo",
 		variant: "secondary",
 	},
 	{
 		heading: ["Pay-per-click", "advertising"],
-		imageSrc: "/services/pay-per-click.svg",
+		imageSrc: PayPerClick,
 		href: "https://searchengineland.com/guide/what-is-paid-search",
 		variant: "primary",
 	},
 	{
 		heading: ["Social Media", "Marketing"],
-		imageSrc: "/services/social-media.svg",
+		imageSrc: SocialMedia,
 		href: "https://searchengineland.com/what-is-social-media-marketing-389170",
 		variant: "tertiary",
 	},
 	{
 		heading: ["Email", "Marketing"],
-		imageSrc: "/services/email-marketing.svg",
+		imageSrc: EmailMarketing,
 		href: "https://searchengineland.com/email-marketing",
 		variant: "secondary",
 	},
 	{
 		heading: ["Content", "Creation"],
-		imageSrc: "/services/content-creation.svg",
+		imageSrc: ContentCreation,
 		href: "https://searchengineland.com/guide/social-media-content-creation",
 		variant: "primary",
 	},
 	{
 		heading: ["Analytics and", "Tracking"],
-		imageSrc: "/services/analytics-tracking.svg",
+		imageSrc: Analytics,
 		href: "https://searchengineland.com/rethinking-the-funnel-with-llm-tracking-analytics-462523",
 		variant: "tertiary",
 	},

@@ -1,6 +1,7 @@
 import Button from "./ui/Button";
 
 import { NavItems } from "../constants";
+import clsx from "clsx";
 
 const Footer = () => {
 	return (
@@ -11,11 +12,16 @@ const Footer = () => {
 						<img src="/icons/logo-white.svg" alt="Logo" height={29} />
 						<ol className="flex items-center gap-10">
 							{NavItems.map((link) => (
-								<li
-									key={link.name}
-									className="hover:underline underline-offset-4 active:scale-95"
-								>
-									<a href={link.href}>{link.name}</a>
+								<li key={link.name}>
+									<a
+										href={link.href}
+										className={clsx(
+											"relative inline-block",
+											"after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-full after:origin-bottom-right after:bg-white after:transition-transform after:scale-x-0 after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left",
+										)}
+									>
+										{link.name}
+									</a>
 								</li>
 							))}
 						</ol>
@@ -58,7 +64,10 @@ const Footer = () => {
 						</p>
 						<a
 							href="#privacy-policy"
-							className="hover:underline underline-offset-4 active:scale-95"
+							className={clsx(
+								"relative inline-block",
+								"after:absolute after:-bottom-1.5 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-white after:transition-transform after:duration-300  hover:after:scale-x-100",
+							)}
 						>
 							Privacy Policy
 						</a>
