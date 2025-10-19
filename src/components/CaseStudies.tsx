@@ -58,7 +58,7 @@ const CaseStudies = () => {
 									className="text-theme-green text-xl leading-7 flex items-center gap-3.5"
 								>
 									Learn More
-									<img src="/icons/arrow-green.svg" alt="Icon" />
+									<img src="/icons/arrow-green.svg" alt="icon" />
 								</a>
 							</div>
 						</div>

@@ -28,7 +28,7 @@
 	}
 
 	.floating-nav {
-		@apply rounded-2xl shadow-lg bg-white;
+		@apply rounded-2xl shadow-2xl bg-white;
 	}
 }
 

@@ -1,3 +1,8 @@
+import "swiper/swiper.css";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+
 const logos = [
 	{
 		name: "Amazon",
@@ -29,15 +34,26 @@ const Logos = () => {
 	return (
 		<section className="pb-36">
 			<div className="mx-container">
-				<div className="flex items-center justify-center gap-24">
-					{logos.map((logo) => (
-						<img
-							key={logo.name}
-							src={logo.link}
-							alt={`${logo.name} logo`}
-							className="h-12 grayscale hover:grayscale-0 transition duration-300 ease-in-out"
-						/>
-					))}
+				<div>
+					<Swiper
+						spaceBetween={95}
+						slidesPerView={logos.length - 1}
+						modules={[Autoplay]}
+						loop
+						autoplay={{
+							delay: 1000,
+						}}
+					>
+						{logos.map((logo) => (
+							<SwiperSlide key={logo.name}>
+								<img
+									src={logo.link}
+									alt={`${logo.name} logo`}
+									className="h-12 grayscale hover:grayscale-0 transition duration-300 ease-in-out"
+								/>
+							</SwiperSlide>
+						))}
+					</Swiper>
 				</div>
 			</div>
 		</section>
