@@ -8,7 +8,7 @@ import Button from "./ui/Button";
 
 const Header = () => {
 	return (
-		<header className="py-[70px]">
+		<header className="py-[140px]">
 			<div className="mx-container">
 				<div className="grid grid-cols-2 items-center gap-28">
 					<div className="space-y-9 max-w-lg">

@@ -26,6 +26,10 @@
 	.mx-container {
 		@apply container mx-auto px-4;
 	}
+
+	.floating-nav {
+		@apply rounded-2xl shadow-lg bg-white;
+	}
 }
 
 @keyframes accordion-up {
