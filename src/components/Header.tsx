@@ -4,6 +4,7 @@ import Icons from "/header/icons.svg";
 import Orbit from "/header/orbit.svg";
 import Speaker from "/header/speaker.svg";
 import Star from "/header/star.svg";
+import SpeakerIllustration from "/header/speaker-illustration-full.png";
 import Button from "./ui/Button";
 import gsap from "gsap";
 
@@ -35,14 +36,21 @@ const Header = () => {
 	}, []);
 
 	return (
-		<header className="py-[140px]">
+		<header className="pt-[198px] mx-padding">
 			<div className="mx-container">
-				<div className="grid grid-cols-2 items-center gap-28 overflow-hidden">
-					<div className="space-y-9 max-w-lg">
-						<h1 className="font-medium text-6xl">
+				<div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-9 sm:gap-11 md:gap-14 lg:gap-20 xl:gap-28">
+					<div className="space-y-9 lg:max-w-lg">
+						<h1 className="heading-1">
 							Navigating the digital landscape for success
 						</h1>
-						<p>
+						<div className="flex lg:hidden items-center justify-center size-full h-[70dvw] sm:h-[50dvh]">
+							<img
+								src={SpeakerIllustration}
+								alt="speaker illustration"
+								className="size-full object-contain"
+							/>
+						</div>
+						<p className="paragraph-xl">
 							Our digital marketing agency helps businesses grow and succeed
 							online through a range of services including SEO, PPC, social
 							media marketing, and content creation.
@@ -51,7 +59,7 @@ const Header = () => {
 							Book a consultation
 						</Button>
 					</div>
-					<div className="flex items-center justify-center size-full h-[515px]">
+					<div className="hidden lg:flex items-center justify-center w-full h-[515px]">
 						<div ref={illustrationRef} className="relative -top-14 w-full">
 							<img
 								src={BlackDot}

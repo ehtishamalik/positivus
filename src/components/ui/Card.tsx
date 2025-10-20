@@ -54,7 +54,7 @@ const Arrow = ({
 		<div
 			ref={containerRef}
 			className={clsx(
-				"relative size-[41px] rounded-full p-2.5 overflow-hidden",
+				"relative size-6 md:size-8 lg:size-[41px] rounded-full p-1 md:p-2 lg:p-2.5 overflow-hidden",
 				{
 					"bg-theme-black": isPrimary || isSecondary,
 					"bg-white": isTertiary,
@@ -65,17 +65,13 @@ const Arrow = ({
 				ref={arrow1Ref}
 				src={isPrimary || isSecondary ? ArrowGreen : ArrowBlack}
 				alt="Icon"
-				width={20}
-				height={20}
-				className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+				className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-3 md:size-4 lg:size-5"
 			/>
 			<img
 				ref={arrow2Ref}
 				src={isPrimary || isSecondary ? ArrowGreen : ArrowBlack}
 				alt="Icon"
-				width={20}
-				height={20}
-				className="absolute top-full -left-full"
+				className="absolute top-full -left-full size-3 md:size-4 lg:size-5"
 			/>
 		</div>
 	);
@@ -92,7 +88,7 @@ const Card = ({ heading, imageSrc, href, variant }: CardProps) => {
 		<div
 			className={clsx(
 				"border border-theme-black h-full text-black shadow-[0px_5px_0px_0px] shadow-theme-black",
-				"rounded-[45px] p-[50px]",
+				"mx-rounded p-6 lg:p-8 xl:p-[50px]",
 				{
 					"bg-theme-green": isPrimary,
 					"bg-theme-gray": isSecondary,
@@ -100,52 +96,65 @@ const Card = ({ heading, imageSrc, href, variant }: CardProps) => {
 				},
 			)}
 		>
-			<div className="grid grid-cols-2 gap-16 h-full items-center">
-				<div className="flex flex-col justify-between h-full">
-					<h3 className="flex items-start flex-col gap-0 font-medium text-3xl">
-						{heading.map((line) => (
-							<span
-								key={line}
-								className={clsx("p-1 rounded-md", {
-									"bg-white": isPrimary || isTertiary,
-									"bg-theme-green": isSecondary,
-								})}
-							>
-								{line}
-							</span>
-						))}
-					</h3>
-					<div
+			<div
+				className={clsx(
+					"grid grid-cols-1 justify-items-start items-end",
+					"lg:grid-cols-2",
+					"gap-4 sm:gap-6 md:gap-10 lg:gap-12 xl:gap-16",
+				)}
+			>
+				<h3 className="flex items-start flex-row lg:flex-col heading-3 gap-2 lg:gap-0 row-span-1 col-span-2 lg:col-span-1">
+					{heading.map((line) => (
+						<span
+							key={line}
+							className={clsx("p-1 rounded-md", {
+								"bg-white": isPrimary || isTertiary,
+								"bg-theme-green": isSecondary,
+							})}
+						>
+							{line}
+						</span>
+					))}
+				</h3>
+				<img
+					src={imageSrc}
+					alt={heading[0]}
+					className="object-contain hidden lg:block lg:row-span-2 size-24 sm:size-28 md:size-32 lg:size-36 xl:size-40"
+				/>
+				<div
+					className={clsx(
+						"inline-flex w-fit gap-4 items-center text-xl font-normal leading-7 cursor-pointer group",
+						{
+							"text-theme-black": isPrimary || isSecondary,
+							"text-white": isTertiary,
+						},
+					)}
+					onMouseEnter={() => setIsHovered(true)}
+					onMouseLeave={() => setIsHovered(false)}
+				>
+					<Arrow isHovered={isHovered} variant={variant || "primary"} />
+					<a
+						href={href}
+						target="_blank"
+						rel="noreferrer noopener"
 						className={clsx(
-							"inline-flex w-fit gap-4 items-center text-xl font-normal leading-7 cursor-pointer group",
+							"relative inline-block transition-transform font-medium text-sm md:text-base lg:text-lg",
+							"after:absolute after:-bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-right after:scale-x-0 after:transition-transform after:duration-300",
+							"group-hover:after:origin-bottom-left group-hover:after:scale-x-100",
 							{
-								"text-theme-black": isPrimary || isSecondary,
-								"text-white": isTertiary,
+								"after:bg-theme-black": isPrimary || isSecondary,
+								"after:bg-white": isTertiary,
 							},
 						)}
-						onMouseEnter={() => setIsHovered(true)}
-						onMouseLeave={() => setIsHovered(false)}
 					>
-						<Arrow isHovered={isHovered} variant={variant || "primary"} />
-						<a
-							href={href}
-							target="_blank"
-							rel="noreferrer noopener"
-							className={clsx(
-								"relative inline-block transition-transform font-medium",
-								"after:absolute after:-bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-right after:scale-x-0 after:transition-transform after:duration-300",
-								"group-hover:after:origin-bottom-left group-hover:after:scale-x-100",
-								{
-									"after:bg-theme-black": isPrimary || isSecondary,
-									"after:bg-white": isTertiary,
-								},
-							)}
-						>
-							Learn More
-						</a>
-					</div>
+						Learn More
+					</a>
 				</div>
-				<img src={imageSrc} alt={heading[0]} />
+				<img
+					src={imageSrc}
+					alt={heading[0]}
+					className="object-contain block lg:hidden size-24 sm:size-28 md:size-32 lg:size-36 xl:size-40"
+				/>
 			</div>
 		</div>
 	);

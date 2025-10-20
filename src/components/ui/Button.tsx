@@ -23,7 +23,7 @@ const Button = ({
 			target="_blank"
 			rel="noreferrer noopener"
 			className={clsx(
-				"inline-flex gap-2 items-center justify-start text-[20px] leading-7 cursor-pointer rounded-[14px] py-[20px] transition-all hover:opacity-80 active:scale-95",
+				"inline-flex gap-2 items-center text-[20px] leading-7 cursor-pointer rounded-[14px] py-[20px] transition-all hover:opacity-80 active:scale-95 w-full sm:w-fit justify-center sm:justify-start",
 				{
 					"bg-theme-green text-black": variant === "primary",
 					"bg-theme-black text-white": variant === "secondary",

@@ -16,7 +16,7 @@ function AccordionItem({
 		<AccordionPrimitive.Item
 			data-slot="accordion-item"
 			className={cn(
-				"bg-theme-gray data-[state=open]:bg-theme-green transition-colors border border-theme-black rounded-[45px] py-[41px] px-[60px] shadow-[0_5px_0_0_#191A23]",
+				"bg-theme-gray data-[state=open]:bg-theme-green transition-colors border border-theme-black mx-rounded p-5 sm:p-6 md:p-8 lg:p-10 xl:py-[41px] xl:px-[60px] shadow-[0_5px_0_0_#191A23]",
 				className,
 			)}
 			{...props}
@@ -34,15 +34,15 @@ function AccordionTrigger({
 			<AccordionPrimitive.Trigger
 				data-slot="accordion-trigger"
 				className={cn(
-					"focus-visible:border-ring focus-visible:ring-ring/50 text-black text-3xl flex flex-1 items-start justify-between gap-4 rounded-md py-4 text-left font-medium transition-all outline-none hover:underline focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50 [&[data-state=open]>span>.plus]:rotate-0",
+					"focus-visible:border-ring focus-visible:ring-ring/50 text-black text-lg md:text-xl lg:text-2xl xl:text-3xl flex flex-1 items-start justify-between gap-4 rounded-md py-4 text-left font-medium transition-all outline-none hover:underline focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50 [&[data-state=open]>span>.plus]:rotate-0",
 					className,
 				)}
 				{...props}
 			>
 				{children}
-				<span className="relative pointer-events-none size-14 text-6xl rounded-full border border-theme-black bg-theme-gray flex items-center justify-center">
-					<span className="plus absolute top-1/2 left-1/2 transition-transform rotate-90 transform -translate-x-1/2 -translate-y-1/2 w-6 h-1.5 bg-theme-black"></span>
-					<span className="absolute top-1/2 left-1/2 transition-transform transform -translate-x-1/2 -translate-y-1/2 w-6 h-1.5 bg-theme-black"></span>
+				<span className="relative pointer-events-none size-8 md:size-10 lg:size-12 xl:size-14 rounded-full border border-theme-black bg-theme-gray flex items-center justify-center">
+					<span className="plus absolute top-1/2 left-1/2 transition-transform rotate-90 transform -translate-x-1/2 -translate-y-1/2 w-[75%] h-1 md:h-1.5 bg-theme-black"></span>
+					<span className="absolute top-1/2 left-1/2 transition-transform transform -translate-x-1/2 -translate-y-1/2 w-[75%] h-1 md:h-1.5 bg-theme-black"></span>
 				</span>
 			</AccordionPrimitive.Trigger>
 		</AccordionPrimitive.Header>

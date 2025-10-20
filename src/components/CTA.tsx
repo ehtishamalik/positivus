@@ -77,10 +77,10 @@ const CTA = () => {
 	}, []);
 
 	return (
-		<section className="pb-20">
+		<section className="mx-padding">
 			<div className="mx-container">
 				<div ref={containerRef} className="py-6">
-					<div className="rounded-[45px] p-[60px] gap-[275px] bg-theme-gray grid grid-cols-2 items-center">
+					<div className="mx-rounded p-6 sm:p-8 md:p-10 lg:p-12 xl:p-[60px] gap-[275px] bg-theme-gray grid grid-cols-1 lg:grid-cols-2 items-center">
 						<div className="space-y-[26px]">
 							<h3 className="text-3xl font-medium">Let’s make things happen</h3>
 							<p className="leading-[1.2] text-lg">
@@ -91,7 +91,7 @@ const CTA = () => {
 								Get your free proposal
 							</Button>
 						</div>
-						<div className="size-full flex items-center justify-center">
+						<div className="hidden size-full lg:flex items-center justify-center">
 							<div ref={illustrationRef} className="relative w-full">
 								<div className="absolute z-10 top-1/2 -translate-y-1/2 left-[90px]">
 									<div className="relative">

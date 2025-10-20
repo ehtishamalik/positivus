@@ -7,10 +7,10 @@ const Footer = () => {
 	return (
 		<footer>
 			<div className="mx-container">
-				<div className="bg-theme-black text-white rounded-tl-[45px] rounded-tr-[45px] py-[55px] px-[60px]">
+				<div className="bg-theme-black text-white rounded-t-[32px] lg:rounded-t-[45px] p-8 lg:py-[55px] lg:px-[60px]">
 					<div className="flex items-center justify-between mb-[66px]">
 						<img src="/icons/logo-white.svg" alt="Logo" height={29} />
-						<ol className="flex items-center gap-10">
+						<ol className="items-center gap-5 xl:gap-10 hidden lg:flex">
 							{NavItems.map((link) => (
 								<li key={link.name}>
 									<a
@@ -25,7 +25,7 @@ const Footer = () => {
 								</li>
 							))}
 						</ol>
-						<ol className="flex items-center gap-5">
+						<ol className="items-center gap-5 hidden sm:flex">
 							<li>
 								<img src="/icons/linkedin.svg" alt="LinkedIn" />
 							</li>
@@ -38,7 +38,7 @@ const Footer = () => {
 						</ol>
 					</div>
 
-					<div className="grid grid-cols-[1fr_2fr] gap-40 mb-[50px]">
+					<div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-4 sm:gap-6 md:gap-8 lg:gap-20 xl:gap-40 mb-[50px]">
 						<div className="space-y-5 max-w-xs">
 							<h5 className="bg-theme-green text-black inline-block p-1.5 rounded-md">
 								Contact us:
@@ -47,18 +47,24 @@ const Footer = () => {
 							<p>Phone: 555-000-0000</p>
 							<p>Address: 0000 Main St Moonstone City, Stardust State 00000</p>
 						</div>
-						<form className="bg-white/5 rounded-[14px] py-14 px-10 flex items-center gap-5">
+						<form className="bg-white/5 rounded-[14px] py-10 md:py-14 px-4 sm:px-6 md:p-8 lg:px-10 flex flex-col xl:flex-row gap-3 md:gap-5">
 							<input
 								type="email"
+								name="news-email"
 								defaultValue="Email"
-								className="border border-white py-[22px] px-[35px] rounded-[14px]"
+								className="border border-white py-[22px] px-[35px] rounded-[14px] flex-1"
 								disabled
 							/>
-							<Button variant="primary">Subscribe to news</Button>
+							<Button
+								variant="primary"
+								className="!w-full xl:!w-fit !justify-center"
+							>
+								Subscribe to news
+							</Button>
 						</form>
 					</div>
 
-					<div className="flex items-center gap-10 pt-[50px] border-t border-t-white">
+					<div className="flex gap-5 lg:gap-10 flex-col md:flex-row items-start pt-[50px] border-t border-t-white">
 						<p>
 							&copy; {new Date().getFullYear()} Positivus. All Rights Reserved.
 						</p>

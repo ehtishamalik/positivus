@@ -58,9 +58,9 @@ const Services = () => {
 				At our digital marketing agency, we offer a range of services to help
 				businesses grow and succeed online. These services include:
 			</Heading>
-			<section className="pb-24">
+			<section className="mx-padding">
 				<div className="mx-container">
-					<div className="grid grid-cols-2 gap-10">
+					<div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-10">
 						{services.map((service) => (
 							<Card key={service.imageSrc} {...service} />
 						))}

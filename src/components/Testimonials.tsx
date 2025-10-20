@@ -1,4 +1,3 @@
-import "swiper/swiper.css";
 import Heading from "./Heading";
 import clsx from "clsx";
 
@@ -9,7 +8,7 @@ import { useState } from "react";
 const Testimonial = () => {
 	return (
 		<div>
-			<div className="relative border-2 rounded-[45px] py-12 px-[52px] border-theme-green leading-[1.6]">
+			<div className="relative border-2 mx-rounded p-6 md:p-8 lg:p-10 xl:py-12 xl:px-[52px] border-theme-green leading-[1.6]">
 				<p className="text-white text-lg">
 					"We have been working with Positivus for the past year and have seen a
 					significant increase in website traffic and leads as a result of their
@@ -81,9 +80,9 @@ const Testimonials = () => {
 				about Our Digital Marketing Services
 			</Heading>
 
-			<section className="mb-[140px]">
+			<section className="mx-padding">
 				<div className="mx-container">
-					<div className="rounded-[45px] bg-theme-black py-[84px]">
+					<div className="mx-rounded bg-theme-black px-5 p-8 sm:p-10 md:py-12 lg:py-16 xl:py-[84px]">
 						<div>
 							<Swiper
 								initialSlide={1}
@@ -92,13 +91,21 @@ const Testimonials = () => {
 								modules={[Navigation, Pagination, Scrollbar, A11y]}
 								centeredSlides={true}
 								onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+								breakpoints={{
+									320: {
+										slidesPerView: 1,
+										spaceBetween: 50,
+										centeredSlides: true,
+									},
+									768: { slidesPerView: 2, spaceBetween: 50 },
+								}}
 							>
 								{TestimonialsArray.map((t) => (
 									<SwiperSlide key={t}>
 										<Testimonial />
 									</SwiperSlide>
 								))}
-								<div className="mt-[124px] flex justify-between max-w-[565px] mx-auto">
+								<div className="mt-12 sm:mt-16 md:mt-24 lg:mt-[124px] flex justify-between max-w-[565px] mx-auto">
 									<SlideButton type="prev" activeIndex={activeIndex} />
 									<div className="flex gap-5 items-center justify-center">
 										{TestimonialsArray.map((t, index) => (

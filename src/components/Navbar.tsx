@@ -41,41 +41,51 @@ const Navbar = () => {
 
 	return (
 		<nav
-			className="container mx-auto py-4 px-8 fixed top-0 inset-x-0 z-50 bg-white transition-all"
+			className="mx-container py-4 fixed top-0 inset-x-0 z-50 bg-white transition-all"
 			ref={navRef}
 		>
-			<div>
-				<div className="flex items-center justify-between">
-					<img src={Logo} alt="logo" height={56} className="h-14" />
-					<ol className="flex items-center gap-10">
-						{NavItems.map((link) => (
-							<li key={link.name}>
-								<a
-									href={link.href}
-									className={clsx(
-										"relative inline-block text-xl font-normal leading-7 text-black transition-transform",
-										"after:absolute after:-bottom-0.5 after:left-0 after:h-0.5 after:w-full after:origin-bottom-right after:scale-x-0 after:bg-theme-black after:transition-transform after:duration-300 hover:after:origin-bottom-left hover:after:scale-x-100",
-									)}
-								>
-									{link.name}
-								</a>
-							</li>
-						))}
-						<li>
+			<div className="flex items-center justify-between">
+				<img src={Logo} alt="logo" height={56} className="h-14" />
+				<ol className="hidden xl:flex items-center gap-10">
+					{NavItems.map((link) => (
+						<li key={link.name}>
 							<a
-								href="https://www.upwork.com/freelancers/~01244186faa3053ffe"
-								target="_blank"
-								rel="noreferrer noopener"
+								href={link.href}
 								className={clsx(
-									"inline-block text-xl font-normal leading-7 px-[35px] py-5 rounded-[14px] border border-theme-black text-black transition-transform",
-									"active:scale-95",
+									"relative inline-block text-xl font-normal leading-7 text-black transition-transform",
+									"after:absolute after:-bottom-0.5 after:left-0 after:h-0.5 after:w-full after:origin-bottom-right after:scale-x-0 after:bg-theme-black after:transition-transform after:duration-300 hover:after:origin-bottom-left hover:after:scale-x-100",
 								)}
 							>
-								Request a Quote
+								{link.name}
 							</a>
 						</li>
-					</ol>
-				</div>
+					))}
+					<li>
+						<a
+							href="https://www.upwork.com/freelancers/~01244186faa3053ffe"
+							target="_blank"
+							rel="noreferrer noopener"
+							className={clsx(
+								"inline-block text-xl font-normal leading-7 px-[35px] py-5 rounded-[14px] border border-theme-black text-black transition-transform",
+								"active:scale-95",
+							)}
+						>
+							Request a Quote
+						</a>
+					</li>
+				</ol>
+				<a
+					href="https://www.upwork.com/freelancers/~01244186faa3053ffe"
+					target="_blank"
+					rel="noreferrer noopener"
+					className={clsx(
+						"text-base font-normal leading-7 px-2.5 py-1.5 rounded-md border border-theme-black text-black transition-transform",
+						"active:scale-95",
+						"hidden sm:inline-block xl:hidden",
+					)}
+				>
+					Request a Quote
+				</a>
 			</div>
 		</nav>
 	);

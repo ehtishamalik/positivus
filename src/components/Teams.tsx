@@ -84,23 +84,21 @@ const Teams = () => {
 				Meet the skilled and experienced team behind our successful digital
 				marketing strategies
 			</Heading>
-			<section>
+			<section className="mx-padding">
 				<div className="mx-container">
-					<div>
-						<div className="grid grid-cols-3 gap-10 mb-10">
-							{teams.map((team) => (
-								<Card key={team.name} {...team} />
-							))}
-						</div>
-						<div className="flex justify-end mb-[100px]">
-							<Button
-								variant="secondary"
-								size="lg"
-								href="https://www.upwork.com/freelancers/~01244186faa3053ffe"
-							>
-								See all team
-							</Button>
-						</div>
+					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-10">
+						{teams.map((team) => (
+							<Card key={team.name} {...team} />
+						))}
+					</div>
+					<div className="flex justify-end">
+						<Button
+							variant="secondary"
+							size="lg"
+							href="https://www.upwork.com/freelancers/~01244186faa3053ffe"
+						>
+							See all team
+						</Button>
 					</div>
 				</div>
 			</section>

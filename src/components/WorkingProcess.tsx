@@ -49,9 +49,9 @@ const WorkingProcess = () => {
 			>
 				Step-by-Step Guide to Achieving Your Business Goals
 			</Heading>
-			<section>
+			<section className="mx-padding">
 				<div className="mx-container">
-					<div className="space-y-[30px] mb-[140px]">
+					<div className="space-y-[30px]">
 						{accordionData.map((item, index) => (
 							<Accordion type="multiple" key={item.title}>
 								<AccordionItem value={`item-${index}`}>

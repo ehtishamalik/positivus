@@ -1,34 +1,38 @@
-import { useId } from "react";
 import Heading from "./Heading";
 import Button from "./ui/Button";
+
+import { useId } from "react";
 
 const Contact = () => {
 	const nameId = useId();
 	const emailId = useId();
 	const messageId = useId();
+
 	return (
 		<>
 			<Heading title="Contact Us" className="!max-w-[323px]" id="contact-us">
 				Connect with Us: Let's Discuss Your Digital Marketing Needs
 			</Heading>
-			<section className="mb-[140px]">
+			<section className="mx-padding">
 				<div className="mx-container">
-					<div className="relative overflow-hidden rounded-[45px] pt-[60px] pb-[80px] px-[100px] bg-theme-gray">
-						<img
-							src="/contact/star-black.svg"
-							alt="Illustration"
-							className="absolute z-10 right-16 top-1/2 -translate-y-1/2"
-						/>
-						<img
-							src="/contact/star-green.svg"
-							alt="Illustration"
-							className="absolute right-44 bottom-10"
-						/>
-						<img
-							src="/contact/star-holo.svg"
-							alt="Illustration"
-							className="absolute -right-80 top-1/2 -translate-y-1/2 scale-85"
-						/>
+					<div className="relative mx-rounded p-8 md:p-10 lg:pt-[60px] lg:pb-[80px] lg:px-[100px] bg-theme-gray">
+						<div className="hidden lg:block">
+							<img
+								src="/contact/star-black.svg"
+								alt="Illustration"
+								className="absolute z-10 right-16 top-1/2 -translate-y-1/2"
+							/>
+							<img
+								src="/contact/star-green.svg"
+								alt="Illustration"
+								className="absolute right-44 bottom-10"
+							/>
+							<img
+								src="/contact/star-holo.svg"
+								alt="Illustration"
+								className="absolute -right-80 top-1/2 -translate-y-1/2 scale-85"
+							/>
+						</div>
 						<div className="flex justify-start">
 							<div className="max-w-xl w-full">
 								<div></div>
