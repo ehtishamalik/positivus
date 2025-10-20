@@ -44,6 +44,14 @@ const SlideButton = ({
     (type === "prev" && activeIndex === 0) ||
     (type === "next" && activeIndex === 4);
 
+  const handleClick = () => {
+    if (type === "prev") {
+      swiper.slidePrev();
+    } else {
+      swiper.slideNext();
+    }
+  };
+
   return (
     <button
       type="button"
@@ -52,9 +60,7 @@ const SlideButton = ({
         "opacity-50 cursor-not-allowed": isDisabled,
         "opacity-100 cursor-pointer": !isDisabled,
       })}
-      onClick={() => {
-        type === "prev" ? swiper.slidePrev() : swiper.slideNext();
-      }}
+      onClick={handleClick}
     >
       {type === "prev" ? (
         <img
