@@ -12,42 +12,42 @@ const teams: Team[] = [
 	{
 		name: "John Smith",
 		role: "CEO and Founder",
-		image: "/team/picture-1.svg",
+		image: "/team/picture-1.png",
 		description:
 			"10+ years of experience in digital marketing. Expertise in SEO, PPC, and content strategy",
 	},
 	{
 		name: "Jane Doe",
 		role: "Director of Operations",
-		image: "/team/picture-2.svg",
+		image: "/team/picture-2.png",
 		description:
 			"7+ years of experience in project management and team leadership. Strong organizational and communication skills",
 	},
 	{
 		name: "Michael Brown",
 		role: "Senior SEO Specialist",
-		image: "/team/picture-3.svg",
+		image: "/team/picture-3.png",
 		description:
 			"5+ years of experience in SEO and content creation. Proficient in keyword research and on-page optimization",
 	},
 	{
 		name: "Emily Johnson",
 		role: "PPC Manager",
-		image: "/team/picture-4.svg",
+		image: "/team/picture-4.png",
 		description:
 			"3+ years of experience in paid search advertising. Skilled in campaign management and performance analysis",
 	},
 	{
 		name: "Brian Williams",
 		role: "Social Media Specialist",
-		image: "/team/picture-5.svg",
+		image: "/team/picture-5.png",
 		description:
 			"4+ years of experience in social media marketing. Proficient in creating and scheduling content, analyzing metrics, and building engagement",
 	},
 	{
 		name: "Sarah Kim",
 		role: "Content Creator",
-		image: "/team/picture-6.svg",
+		image: "/team/picture-6.png",
 		description:
 			"2+ years of experience in writing and editing. Skilled in creating compelling, SEO-optimized content for various industries.",
 	},

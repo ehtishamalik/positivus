@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import Heading from "./Heading";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -36,7 +37,7 @@ const CaseStudies = () => {
 									key={caseStudy.link}
 									className="flex justify-between gap-16"
 								>
-									<div className="flex flex-col gap-5">
+									<div className="flex flex-col items-start gap-5">
 										<p className="text-white text-lg">
 											{caseStudy.description}
 										</p>
@@ -44,7 +45,11 @@ const CaseStudies = () => {
 											href={caseStudy.link}
 											target="_blank"
 											rel="noopener noreferrer"
-											className="text-theme-green text-xl leading-7 flex items-center gap-3.5 mt-auto"
+											className={clsx(
+												"text-theme-green text-xl leading-7 flex items-center gap-3.5 mt-auto",
+												"relative",
+												"after:absolute after:-bottom-0.5 after:left-0 after:h-0.5 after:w-full after:origin-bottom-right after:scale-x-0 after:bg-theme-green after:transition-transform after:duration-300 hover:after:origin-bottom-left hover:after:scale-x-75",
+											)}
 										>
 											Learn More
 											<img
