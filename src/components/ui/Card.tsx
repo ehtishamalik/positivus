@@ -1,10 +1,10 @@
-import clsx from "clsx";
 import gsap from "gsap";
 import ArrowBlack from "/icons/arrow-icon-black.svg";
 import ArrowGreen from "/icons/arrow-icon-green.svg";
 
 import { useState, useRef } from "react";
 import { useGSAP } from "@gsap/react";
+import { cn } from "../../lib/utils";
 
 interface CardProps {
   heading: string[];
@@ -53,7 +53,7 @@ const Arrow = ({
   return (
     <div
       ref={containerRef}
-      className={clsx(
+      className={cn(
         "relative size-6 md:size-8 lg:size-[41px] rounded-full p-1 md:p-2 lg:p-2.5 overflow-hidden",
         {
           "bg-theme-black": isPrimary || isSecondary,
@@ -86,7 +86,7 @@ const Card = ({ heading, imageSrc, href, variant }: CardProps) => {
 
   return (
     <div
-      className={clsx(
+      className={cn(
         "border border-theme-black h-full text-black shadow-[0px_5px_0px_0px] shadow-theme-black",
         "mx-rounded p-6 lg:p-8 xl:p-[50px]",
         {
@@ -97,7 +97,7 @@ const Card = ({ heading, imageSrc, href, variant }: CardProps) => {
       )}
     >
       <div
-        className={clsx(
+        className={cn(
           "grid grid-cols-1 justify-items-start items-end",
           "lg:grid-cols-2",
           "gap-4 sm:gap-6 md:gap-10 lg:gap-12 xl:gap-16"
@@ -107,7 +107,7 @@ const Card = ({ heading, imageSrc, href, variant }: CardProps) => {
           {heading.map((line) => (
             <span
               key={line}
-              className={clsx("p-1 rounded-md", {
+              className={cn("p-1 rounded-md", {
                 "bg-white": isPrimary || isTertiary,
                 "bg-theme-green": isSecondary,
               })}
@@ -122,7 +122,7 @@ const Card = ({ heading, imageSrc, href, variant }: CardProps) => {
           className="object-contain hidden lg:block lg:row-span-2 size-24 sm:size-28 md:size-32 lg:size-36 xl:size-40"
         />
         <div
-          className={clsx(
+          className={cn(
             "inline-flex w-fit gap-4 items-center text-xl font-normal leading-7 cursor-pointer group",
             {
               "text-theme-black": isPrimary || isSecondary,
@@ -137,7 +137,7 @@ const Card = ({ heading, imageSrc, href, variant }: CardProps) => {
             href={href}
             target="_blank"
             rel="noreferrer noopener"
-            className={clsx(
+            className={cn(
               "relative inline-block transition-transform font-medium text-sm md:text-base lg:text-lg",
               "after:absolute after:-bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-right after:scale-x-0 after:transition-transform after:duration-300",
               "group-hover:after:origin-bottom-left group-hover:after:scale-x-100",

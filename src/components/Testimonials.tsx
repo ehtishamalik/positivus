@@ -1,9 +1,9 @@
 import Heading from "./Heading";
-import clsx from "clsx";
 
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import { useState } from "react";
+import { cn } from "../lib/utils";
 
 const Testimonial = () => {
   return (
@@ -56,7 +56,7 @@ const SlideButton = ({
     <button
       type="button"
       disabled={isDisabled}
-      className={clsx({
+      className={cn({
         "opacity-50 cursor-not-allowed": isDisabled,
         "opacity-100 cursor-pointer": !isDisabled,
       })}

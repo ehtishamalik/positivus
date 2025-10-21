@@ -1,7 +1,7 @@
-import clsx from "clsx";
 import Heading from "./Heading";
 
 import { Swiper, SwiperSlide } from "swiper/react";
+import { cn } from "../lib/utils";
 
 const CaseStudiesData = [
   {
@@ -45,7 +45,7 @@ const CaseStudies = () => {
                       href={caseStudy.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={clsx(
+                      className={cn(
                         "text-theme-green text-xl leading-7 flex items-center gap-3.5 mt-auto",
                         "relative",
                         "after:absolute after:-bottom-0.5 after:left-0 after:h-0.5 after:w-full after:origin-bottom-right after:scale-x-0 after:bg-theme-green after:transition-transform after:duration-300 hover:after:origin-bottom-left hover:after:scale-x-75"

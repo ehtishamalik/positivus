@@ -1,4 +1,4 @@
-import clsx from "clsx";
+import { cn } from "../../lib/utils";
 
 interface ButtonProps {
   children: React.ReactNode;
@@ -22,7 +22,7 @@ const Button = ({
       href={href}
       target="_blank"
       rel="noreferrer noopener"
-      className={clsx(
+      className={cn(
         "inline-flex gap-2 items-center text-[20px] leading-7 cursor-pointer rounded-[14px] py-[20px] transition-all hover:opacity-80 active:scale-95 w-full sm:w-fit justify-center sm:justify-start",
         {
           "bg-theme-green text-black": variant === "primary",
