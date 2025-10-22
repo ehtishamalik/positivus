@@ -139,7 +139,7 @@ const Card = ({ heading, imageSrc, href, variant }: CardProps) => {
             rel="noreferrer noopener"
             className={cn(
               "relative inline-block transition-transform font-medium text-sm md:text-base lg:text-lg",
-              "after:absolute after:-bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-right after:scale-x-0 after:transition-transform after:duration-300",
+              "after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-right after:scale-x-0 after:transition-transform after:duration-300",
               "group-hover:after:origin-bottom-left group-hover:after:scale-x-100",
               {
                 "after:bg-theme-black": isPrimary || isSecondary,
