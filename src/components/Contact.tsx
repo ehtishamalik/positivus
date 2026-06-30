@@ -10,12 +10,12 @@ const Contact = () => {
 
   return (
     <>
-      <Heading title="Contact Us" className="!max-w-[323px]" id="contact-us">
+      <Heading title="Contact Us" className="max-w-80.75!" id="contact-us">
         Connect with Us: Let's Discuss Your Digital Marketing Needs
       </Heading>
       <section className="mx-padding">
         <div className="mx-container">
-          <div className="relative mx-rounded p-8 md:p-10 lg:pt-[60px] lg:pb-[80px] lg:px-[100px] bg-theme-gray">
+          <div className="relative mx-rounded p-8 md:p-10 lg:pt-15 lg:pb-20 lg:px-25 bg-theme-gray">
             <div className="hidden lg:block">
               <img
                 src="/contact/star-black.svg"
@@ -36,39 +36,39 @@ const Contact = () => {
             <div className="flex justify-start">
               <div className="max-w-xl w-full">
                 <div></div>
-                <form className="space-y-[25px]">
-                  <div className="flex flex-col gap-[5px]">
+                <form className="space-y-6.25">
+                  <div className="flex flex-col gap-1.25">
                     <label htmlFor={nameId}>Name</label>
                     <input
                       type="text"
                       id={nameId}
                       placeholder="Name"
                       disabled
-                      className="py-[18px] px-[30px] rounded-[14px] bg-white border border-theme-black"
+                      className="py-4.5 px-7.5 rounded-[14px] bg-white border border-theme-black"
                     />
                   </div>
-                  <div className="flex flex-col gap-[5px]">
+                  <div className="flex flex-col gap-1.25">
                     <label htmlFor={emailId}>Email*</label>
                     <input
                       type="email"
                       id={emailId}
                       placeholder="Email"
                       disabled
-                      className="py-[18px] px-[30px] rounded-[14px] bg-white border border-theme-black"
+                      className="py-4.5 px-7.5 rounded-[14px] bg-white border border-theme-black"
                     />
                   </div>
-                  <div className="flex flex-col gap-[5px]">
+                  <div className="flex flex-col gap-1.25">
                     <label htmlFor={messageId}>Message*</label>
                     <textarea
                       id={messageId}
                       placeholder="Message"
                       minLength={1}
                       disabled
-                      className="min-h-[190px] py-[18px] px-[30px] rounded-[14px] bg-white border border-theme-black"
+                      className="min-h-47.5 py-4.5 px-7.5 rounded-[14px] bg-white border border-theme-black"
                     />
                   </div>
                   <Button
-                    className="w-full !justify-center"
+                    className="w-full justify-center!"
                     href="https://www.upwork.com/freelancers/~01244186faa3053ffe"
                   >
                     Send Message
