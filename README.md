@@ -51,8 +51,7 @@ cd positivus
 The site can be deployed to any static web hosting service such as GitHub Pages, Netlify, or Vercel.
 
 ## License
-
-[Custom License](LICENSE)
+MIT
 
 ## Contact
 
